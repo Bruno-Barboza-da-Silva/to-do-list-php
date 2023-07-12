@@ -2,7 +2,7 @@
   include 'config.php';
 
   $sql = "SELECT * FROM demo";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($mysqli, $sql);
 
   $count = mysqli_num_rows($result);
 ?>
