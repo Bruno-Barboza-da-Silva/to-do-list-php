@@ -6,7 +6,7 @@
   $txt = $_POST['txt']; 
 
   $sql = "UPDATE demo SET txt='$txt' WHERE id='$id'";
-  $result = mysqli_query($conn, $sql);
+  $result = mysqli_query($mysqli, $sql);
 
   if ($result) {
     echo 1;

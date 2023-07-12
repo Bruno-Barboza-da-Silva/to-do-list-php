@@ -136,9 +136,42 @@ $(document).on("click", "#editText", function(e) {
 
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
+// Cadastro
+$("#cadastro").on("click", function(e){
+
+  e.preventDefault();
+  email = $("#email").val();
+  senha = $("#senha").val();
 
 
 
+  console.log(email, senha)
+
+  $.ajax({
+    url: 'insertuser.php',
+    type: 'post',
+    data: {email, senha},
+    success: function(result){
+      if (result == 1) {
+        alert("Usuário cadastrado com sucesso!");
+        window.location.href = "painel.php"
+        // showData();
+        // totalTask();
+      }else {
+        console.log(result);
+        alert("ERRO")
+      }
+    }
+  });
+});
+
+
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
   $(document).on("click", "#clear", function(){
