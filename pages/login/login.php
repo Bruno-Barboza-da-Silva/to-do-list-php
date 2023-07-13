@@ -14,17 +14,17 @@
 <div class="container">
     <h1>Acesse sua conta</h1>
     <form action="../../funcionalidades/loginusuario.php" method="POST">
-        <p>
+        <div>
             <label>E-mail</label>
             <input type="text" name="email">
-        </p>
-        <p>
+            </div>
+
+            <div>
             <label>Senha</label>
             <input type="password" name="senha">
-        </p>
-        <p>
+
+            </div>
             <button type="submit" id="login">Entrar</button>
-        </p>
     </form>
     </div>
     </div>
