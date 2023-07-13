@@ -22,7 +22,7 @@
     <form class="form" action="../../funcionalidades/script.js">
       <div class="inputBox">
         <input type="text" id="txt" placeholder="Enter your Task" required>
-        <button id="btn"><i class="fa fa-plus"></i></button>
+        <button id="adicionar"><i class="fa fa-plus"></i></button>
       </div>
     </form>
     <ul id="data">

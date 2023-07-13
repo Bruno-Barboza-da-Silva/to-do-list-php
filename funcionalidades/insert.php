@@ -2,15 +2,12 @@
 // Include Connection
 include 'config.php';
 
-session_start(); // Inicia a sessão
-
-if (isset($_SESSION['id'])) {
-    $UsuarioId = $_SESSION['id'];
-    $txt = mysqli_real_escape_string($mysqli, $_POST['txt']);
+  $UsuarioId = $_POST['UsuarioId'];
+  $txt = $_POST['txt']; 
 
     $sql = "INSERT INTO demo (txt, id_usuario, status) VALUES ('$txt', $UsuarioId, 1)";
     $result = mysqli_query($mysqli, $sql);
-}
+
 
 if ($result) {
     echo 1;
