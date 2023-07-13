@@ -1,21 +1,110 @@
 console.log("pegou aqui")
 
 $(document).ready(function(){
-  function showData() {
-    $.ajax ({
-      url: '../../funcionalidades/show.php',
+
+  let UsuarioId = 0;
+
+  function sessao() {
+    $.ajax({
+      url: '../../funcionalidades/sessao.php',
       type: 'post',
-      success: function(result){
+      async: true,
+      xhrFields: {
+        withCredentials: true
+      },
+      success: function(result) {
+        if (result !== "false") {
+          console.log("Tem alguma sessão aqui!!");
+          console.log("Valor da sessão: " + result);
+          alert("Sessão iniciada com sucesso!");
+          UsuarioId = result;
+          console.log(UsuarioId);
+          showData(); // Chama a função showData() aqui
+          showFazendo(); // Chama a função showFazendo() aqui
+          showFeito(); // Chama a função showFeito() aqui
+        } else {
+          console.log("Sem sessão");
+        }
+      },
+      error: function() {
+        console.log("Erro ao processar a requisição");
+      }
+    });
+  }
+
+  sessao();
+
+  //----------------------------------------------------------
+
+  function showData() {
+    console.log("entrando no showdata");
+    console.log(UsuarioId);
+
+    $.ajax({
+      url: '../../funcionalidades/show.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
         if (result) {
           $("#data").html(result);
         } else {
           console.log(result);
-          alert("ERRO")
+          alert("ERRO");
         }
       }
     });
   }
-  showData();
+
+  function showFazendo() {
+    console.log("entrando no showFazendo");
+    console.log(UsuarioId);
+
+    $.ajax({
+      url: '../../funcionalidades/showFazendo.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result) {
+          $("#data2").html(result);
+        } else {
+          console.log(result);
+          alert("ERRO");
+        }
+      }
+    });
+  }
+
+
+
+  function showFeito() {
+    console.log("entrando no showFeito");
+    console.log(UsuarioId);
+
+    $.ajax({
+      url: '../../funcionalidades/showFeito.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result) {
+          $("#data3").html(result);
+        } else {
+          console.log(result);
+          alert("ERRO");
+        }
+      }
+    });
+  }
+
+
+
+
+
+
+
+
 
   function totalTask() {
     $.ajax ({
