@@ -3,7 +3,7 @@ include 'config.php';
 
 $UsuarioId = $_GET['UsuarioId'];
 
-$sql = "SELECT * FROM demo WHERE id_usuario=$UsuarioId AND status=1";
+$sql = "SELECT * FROM demo WHERE id_usuario=$UsuarioId AND status=3";
 
 $result = mysqli_query($mysqli, $sql);
 
@@ -21,8 +21,3 @@ if (mysqli_num_rows($result) > 0) {
     echo "<div style='text-align:center;'>Hooray, no task here.</div>";
 }
 ?>
-
-
-
-
-

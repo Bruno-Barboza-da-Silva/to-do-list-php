@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="painel.css">
-  <title>Todo List | Brave Coder</title>
+  <title>Todo List</title>
 </head>
 <body>
 
@@ -37,12 +37,8 @@
   <div class="container">
     <h1>Fazendo...</h1>
     <form class="form" action="../../funcionalidades/script.js">
-      <div class="inputBox">
-        <input type="text" id="txt" placeholder="Enter your Task" required>
-        <button id="btn"><i class="fa fa-plus"></i></button>
-      </div>
     </form>
-    <ul id="data">
+    <ul id="data2">
 
     </ul>
     <div class="footer">
@@ -54,12 +50,8 @@
   <div class="container">
     <h1>Feito!</h1>
     <form class="form" action="../../funcionalidades/script.js">
-      <div class="inputBox">
-        <input type="text" id="txt" placeholder="Enter your Task" required>
-        <button id="btn"><i class="fa fa-plus"></i></button>
-      </div>
     </form>
-    <ul id="data">
+    <ul id="data3">
 
     </ul>
     <div class="footer">
