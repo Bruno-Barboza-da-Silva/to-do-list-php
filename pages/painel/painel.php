@@ -12,6 +12,7 @@
 
 
 <div class="sair">
+  <h1 id="ola">olá [nome]</h1>
 <a href="../../funcionalidades/logout.php" id="sair" >Sair</a>
 </div>
 

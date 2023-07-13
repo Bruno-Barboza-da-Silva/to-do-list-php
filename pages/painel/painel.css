@@ -16,9 +16,11 @@ body {
 
 #sair {
     background-color: red;
+    color: white;
     padding: 20px;
     text-decoration: none;
     border-radius: 10px;
+    margin-bottom: 20px;
 
 }
 
@@ -27,6 +29,11 @@ body {
     justify-content: flex-end;
 }
 
+
+#ola {
+    width: 100%;
+    text-align: center;
+}
 
 .wrapper {
     display: flex;
@@ -47,6 +54,7 @@ body {
     align-items: center;
     padding: 50px;
     border-radius: 30px;
+    margin-bottom: 120px;
 }
 
 
