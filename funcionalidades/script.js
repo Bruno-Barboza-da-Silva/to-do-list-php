@@ -1,10 +1,17 @@
+console.log("pegou aqui")
+
 $(document).ready(function(){
   function showData() {
     $.ajax ({
-      url: 'show.php',
+      url: '../../funcionalidades/show.php',
       type: 'post',
       success: function(result){
-        $("#data").html(result);
+        if (result) {
+          $("#data").html(result);
+        } else {
+          console.log(result);
+          alert("ERRO")
+        }
       }
     });
   }
@@ -12,7 +19,7 @@ $(document).ready(function(){
 
   function totalTask() {
     $.ajax ({
-      url: 'task.php',
+      url: '../../funcionalidades/task.php',
       type: 'post',
       success: function(result){
         $("#total_task").html(result);
@@ -26,7 +33,7 @@ $(document).ready(function(){
     txt = $("#txt").val();
 
     $.ajax({
-      url: 'insert.php',
+      url: '../../funcionalidades/insert.php',
       type: 'post',
       data: {txt: txt},
       success: function(result){
@@ -47,7 +54,7 @@ $(document).ready(function(){
     element = $(this);
 
     $.ajax({
-      url: 'delete.php',
+      url:'../../funcionalidades/delete.php',
       type: 'post',
       data: {id: id},
       success: function(result) {
@@ -83,7 +90,7 @@ $(document).on("click", "#edit", function(){
   element = $(this);
 
   $.ajax({
-    url: 'showEdit.php',
+    url:'../../funcionalidades/showEdit.php',
     type: 'GET',
     data: {id: id},
     async: true,
@@ -110,7 +117,7 @@ $(document).on("click", "#editText", function(e) {
   console.log(id, txt, "teste");
 
   $.ajax({
-    url: 'edit.php',
+    url:'../../funcionalidades/edit.php',
     type: 'post',
     data: {id, txt},
     async: true, 
@@ -148,15 +155,13 @@ $("#cadastro").on("click", function(e){
   console.log(email, senha)
 
   $.ajax({
-    url: 'insertuser.php',
+    url: '../../funcionalidades/insertuser.php',
     type: 'post',
     data: {email, senha},
     success: function(result){
       if (result == 1) {
         alert("Usuário cadastrado com sucesso!");
         window.location.href = "painel.php"
-        // showData();
-        // totalTask();
       }else {
         console.log(result);
         alert("ERRO")
@@ -171,12 +176,13 @@ $("#cadastro").on("click", function(e){
 
 
 
+
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
   $(document).on("click", "#clear", function(){
     $.ajax({
-      url: 'clear.php',
+      url:'../../funcionalidades/clear.php',
       type: 'post',
       success: function(result) {
         if (result == 1) {
