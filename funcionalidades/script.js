@@ -203,20 +203,37 @@ $(document).ready(function(){
 
 
 
+  $(document).on("click", "#clearFazer", function(){
+    console.log("botão clear clicado!")
+    $.ajax({
+      url:'../../funcionalidades/clear.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result == 1) {
+          showData();
+          totalFazer();
+        }
+      }
+    });
+  });
 
 
   
 
 
 
-  $("#btn").on("click", function(e){
+  $("#adicionar").on("click", function(e){
     e.preventDefault();
     txt = $("#txt").val();
+    UsuarioId = UsuarioId
 
     $.ajax({
       url: '../../funcionalidades/insert.php',
       type: 'post',
-      data: {txt: txt},
+      data: {txt,
+      UsuarioId},
       success: function(result){
         if (result == 1) {
           txt = $("#txt").val('');
