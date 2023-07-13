@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="painel.css">
   <title>Todo List | Brave Coder</title>
 </head>
 <body>
 
+
+<div class="sair">
+<a href="../../funcionalidades/logout.php" id="sair" >Sair</a>
+</div>
+
 <div class="wrapper">
+  <div class="container">
+    <h1>A fazer...</h1>
     <form class="form" action="../../funcionalidades/script.js">
       <div class="inputBox">
         <input type="text" id="txt" placeholder="Enter your Task" required>
@@ -26,10 +33,42 @@
     </div>
   </div>
 
-      <!-- Botao de sair -->
-      <p>
-        <a href="logout.php" id="sair">Sair</a>
-    </p>
+  <div class="container">
+    <h1>Fazendo...</h1>
+    <form class="form" action="../../funcionalidades/script.js">
+      <div class="inputBox">
+        <input type="text" id="txt" placeholder="Enter your Task" required>
+        <button id="btn"><i class="fa fa-plus"></i></button>
+      </div>
+    </form>
+    <ul id="data">
+
+    </ul>
+    <div class="footer">
+      <p id="total_task"></p>
+      <button id="clear">Clear</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Feito!</h1>
+    <form class="form" action="../../funcionalidades/script.js">
+      <div class="inputBox">
+        <input type="text" id="txt" placeholder="Enter your Task" required>
+        <button id="btn"><i class="fa fa-plus"></i></button>
+      </div>
+    </form>
+    <ul id="data">
+
+    </ul>
+    <div class="footer">
+      <p id="total_task"></p>
+      <button id="clear">Clear</button>
+    </div>
+  </div>
+
+  </div>
+
 
 
 
@@ -40,7 +79,6 @@
         <div class="modal-content">
             <!-- Conteúdo da janela modal -->
             <h1>Editar a sua atividade</h1>
-            <p>Este é um exemplo de janela modal em PHP.</p>
             <input type="text" id="editInput">
             <button onclick="closeModal()" id="closeModal">Fechar</button>
             <button type="button" id="editText">Editar</button>

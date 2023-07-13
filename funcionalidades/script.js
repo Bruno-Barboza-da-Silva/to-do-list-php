@@ -143,7 +143,7 @@ $(document).on("click", "#editText", function(e) {
 
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
-// Cadastro
+// Cadastro -> colocar para funcionar no ajax
 $("#cadastro").on("click", function(e){
 
   e.preventDefault();
@@ -170,10 +170,36 @@ $("#cadastro").on("click", function(e){
   });
 });
 
+//--------------------------------------------------------------------------------------------------------------------------------
+// login -> colocar para funcionar no ajax
+
+$("#login").on("click", function(e){
+
+  e.preventDefault();
+  email = $("#email").val();
+  senha = $("#senha").val();
 
 
 
+  console.log(email, senha)
 
+  $.ajax({
+    url: '../../funcionalidades/loginusuario.php',
+    type: 'post',
+    data: {email, senha},
+    success: function(result){
+      if (result == 1) {
+        alert("Usuário cadastrado com sucesso!");
+        window.location.href = "painel.php"
+      }else {
+        console.log(result);
+        alert("ERRO")
+      }
+    }
+  });
+});
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
