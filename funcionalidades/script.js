@@ -22,6 +22,9 @@ $(document).ready(function(){
           showData(); // Chama a função showData() aqui
           showFazendo(); // Chama a função showFazendo() aqui
           showFeito(); // Chama a função showFeito() aqui
+          totalFazer(); // Chama a função totalFazer() aqui
+          totalFazendo(); // Chama a função totalFazendo() aqui
+          totalFeito(); // Chama a função totalFeito() aqui
         } else {
           console.log("Sem sessão");
         }
@@ -76,8 +79,6 @@ $(document).ready(function(){
     });
   }
 
-
-
   function showFeito() {
     console.log("entrando no showFeito");
     console.log(UsuarioId);
@@ -102,20 +103,57 @@ $(document).ready(function(){
 
 
 
+  function totalFazer() {
+    console.log("entrando no TotalFazer");
+    console.log(UsuarioId);
 
-
-
-
-  function totalTask() {
     $.ajax ({
-      url: '../../funcionalidades/task.php',
-      type: 'post',
+      url: '../../funcionalidades/totalFazer.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
       success: function(result){
         $("#total_task").html(result);
+        console.log(result)
       }
     });
   }
-  totalTask();
+
+  function totalFazendo() {
+    console.log("entrando no TotalFazendo");
+    console.log(UsuarioId);
+
+    $.ajax ({
+      url: '../../funcionalidades/totalFazendo.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result){
+        $("#total_task2").html(result);
+        console.log(result)
+      }
+    });
+  }
+
+  function totalFeito() {
+    console.log("entrando no TotalFeito");
+    console.log(UsuarioId);
+
+    $.ajax ({
+      url: '../../funcionalidades/totalFeito.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result){
+        $("#total_task3").html(result);
+        console.log(result)
+      }
+    });
+  }
+
+
+
+
 
   $("#btn").on("click", function(e){
     e.preventDefault();

@@ -42,7 +42,7 @@
 
     </ul>
     <div class="footer">
-      <p id="total_task"></p>
+      <p id="total_task2"></p>
       <button id="clear">Clear</button>
     </div>
   </div>
@@ -55,7 +55,7 @@
 
     </ul>
     <div class="footer">
-      <p id="total_task"></p>
+      <p id="total_task3"></p>
       <button id="clear">Clear</button>
     </div>
   </div>
