@@ -10,7 +10,7 @@ session_destroy();
 
 echo "<script>";
 echo "alert('Você saiu com sucesso');";
-echo "window.location.href = 'index.php';";
+echo "window.location.href = '../index.php';";
 echo "</script>";
 exit();
 ?>
