@@ -152,6 +152,60 @@ $(document).ready(function(){
   }
 
 
+  $(document).on("click", "#clearFazer", function(){
+    console.log("botão clear clicado!")
+    $.ajax({
+      url:'../../funcionalidades/clear.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result == 1) {
+          showData();
+          totalFazer();
+        }
+      }
+    });
+  });
+
+  
+  $(document).on("click", "#clearFazendo", function(){
+    console.log("botão clear clicado!")
+    $.ajax({
+      url:'../../funcionalidades/clearFazendo.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result == 1) {
+          showFazendo();
+          totalFazendo();
+        }
+      }
+    });
+  });
+
+  $(document).on("click", "#clearFeito", function(){
+    console.log("botão clear clicado!")
+    $.ajax({
+      url:'../../funcionalidades/clearFeito.php',
+      type: 'GET',
+      data: {UsuarioId},
+      async: true,
+      success: function(result) {
+        if (result == 1) {
+          showFeito();
+          totalFeito();
+        }
+      }
+    });
+  });
+
+
+
+
+
+  
 
 
 
@@ -333,16 +387,5 @@ $("#login").on("click", function(e){
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-  $(document).on("click", "#clear", function(){
-    $.ajax({
-      url:'../../funcionalidades/clear.php',
-      type: 'post',
-      success: function(result) {
-        if (result == 1) {
-          showData();
-          totalTask();
-        }
-      }
-    });
-  });
+
 });
