@@ -1,15 +1,21 @@
 <?php
-  // Include Connection
-  include 'config.php';
+// Include Connection
+include 'config.php';
 
-  $txt = $_POST['txt'];
+session_start(); // Inicia a sessão
 
-  $sql = "INSERT INTO demo (txt) VALUES ('$txt')";
-  $result = mysqli_query($mysqli, $sql);
+if (isset($_SESSION['id'])) {
+    $UsuarioId = $_SESSION['id'];
+    $txt = mysqli_real_escape_string($mysqli, $_POST['txt']);
 
-  if ($result) {
+    $sql = "INSERT INTO demo (txt, id_usuario) VALUES ('$txt', $UsuarioId)";
+    $result = mysqli_query($mysqli, $sql);
+}
+
+if ($result) {
     echo 1;
-  }else {
+} else {
     echo "Error: {$sql}" . mysqli_error($mysqli);
-  }
+}
 ?>
+
