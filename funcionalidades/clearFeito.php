@@ -5,7 +5,7 @@
   $UsuarioId = $_GET['UsuarioId'];
 
 
-  $sql = "DELETE FROM demo WHERE id_usuario=$UsuarioId AND status=1";
+  $sql = "DELETE FROM demo WHERE id_usuario=$UsuarioId AND status=3";
 
 
 
