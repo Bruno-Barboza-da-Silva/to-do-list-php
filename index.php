@@ -11,13 +11,13 @@
 <h2> Gerencie suas tarefas de uma forma fácil e rápida</h2>
       <!-- Botao de login -->
       <p>
-        <a href="login.php" id="sair">Entrar</a>
+        <a href="./pages/login/login.php" id="sair">Entrar</a>
     </p>    
 
 
           <!-- Botao de cadastro -->
           <p>
-        <a href="cadastro.php" id="sair">Cadastre-se</a>
+        <a href="./pages/cadastro/cadastro.php" id="sair">Cadastre-se</a>
     </p>   
 
 

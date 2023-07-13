@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Crie sua conta</h1>
-    <form action="" method="POST">
+    <form action="../../funcionalidades/insertuser.php" method="POST">
         <p>
             <label>E-mail</label>
             <input type="text" name="email" id="email">
@@ -18,7 +18,7 @@
             <input type="password" name="senha" id="senha">
         </p>
         <p>
-            <button id="cadastro" type="submit">Entrar</button>
+            <button id="cadastro" type="submit">Cadastrar</button>
         </p>
     </form>
 

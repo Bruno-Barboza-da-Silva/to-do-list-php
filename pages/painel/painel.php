@@ -11,7 +11,7 @@
 <body>
 
 <div class="wrapper">
-    <form class="form">
+    <form class="form" action="../../funcionalidades/script.js">
       <div class="inputBox">
         <input type="text" id="txt" placeholder="Enter your Task" required>
         <button id="btn"><i class="fa fa-plus"></i></button>
@@ -49,7 +49,7 @@
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../../funcionalidades/script.js"></script>
 
 
 
