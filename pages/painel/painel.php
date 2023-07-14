@@ -12,7 +12,7 @@
 
 
 <div class="sair">
-  <h1 id="ola">olá [nome]</h1>
+  <h1 id="ola">To do list</h1>
 <a href="../../funcionalidades/logout.php" id="sair" >Sair</a>
 </div>
 
@@ -30,7 +30,7 @@
     </ul>
     <div class="footer">
       <p id="total_task"></p>
-      <button id="clearFazer">Clear</button>
+      <button id="clearFazer">Apagar tudo</button>
     </div>
   </div>
 

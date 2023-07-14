@@ -340,10 +340,13 @@ $(document).on("click", "#left", function(e) {
       async: true, 
       success: function(result) {
         if (result == 1) {
-          
           alert("Alteração realizada com sucesso!");
-          showData();
-          totalTask();
+          showData(); // Chama a função showData() aqui
+          showFazendo(); // Chama a função showFazendo() aqui
+          showFeito(); // Chama a função showFeito() aqui
+          totalFazer(); // Chama a função totalFazer() aqui
+          totalFazendo(); // Chama a função totalFazendo() aqui
+          totalFeito(); // Chama a função totalFeito() aqui
           closeModal();
         } else {
           alert("ERRO");
