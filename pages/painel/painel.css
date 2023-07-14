@@ -67,12 +67,6 @@ li {
 
 
 
-
-
-
-
-
-
 /* Estilos para a janela modal */
 .modal {
     display: none;
@@ -102,3 +96,5 @@ li {
     border: none;
     cursor: pointer;
 }
+
+

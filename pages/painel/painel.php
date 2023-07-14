@@ -30,7 +30,7 @@
     </ul>
     <div class="footer">
       <p id="total_task"></p>
-      <button id="clearFazer">Clear</button>
+      <button id="clearFazer">Apagar tudo</button>
     </div>
   </div>
 
