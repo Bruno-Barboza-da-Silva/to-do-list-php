@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="painel.css">
   <title>Todo List</title>
 </head>
@@ -22,7 +21,7 @@
     <form class="form" action="../../funcionalidades/script.js">
       <div class="inputBox">
         <input type="text" class="adicionar-texto" id="txt" placeholder="Nova atividade..." required>
-        <button class="adicionar" id="adicionar"><i class="fa fa-plus"></i></button>
+        <button class="adicionar" id="adicionar"><img src="../../images/adicionar.svg"  class="btn-adicionar"alt="deletar" ></i></button>
       </div>
     </form>
     <ul id="data">

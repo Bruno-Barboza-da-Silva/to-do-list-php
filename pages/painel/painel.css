@@ -150,14 +150,18 @@ p .teste {
 .adicionar-texto {
     padding: 10px;
     border-radius: 5px;
+    height: 40px;
 }
 
 .adicionar {
     background-color: #4CAF50;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
 }
 
+.btn-adicionar{
+    height: 20px;
+}
 
 .botoes{
     padding: 5px;
@@ -167,6 +171,11 @@ p .teste {
 .delete {
     background-color: red;
 }
+
+.btn-img {
+    height: 20px;
+}
+
 
 .edit {
     background-color: blue;
@@ -200,4 +209,13 @@ p .teste {
     width: 100%;
     text-align: right;
     margin-top: 10px;
+}
+
+
+.inputBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
 }

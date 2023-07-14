@@ -13,10 +13,10 @@ if (mysqli_num_rows($result) > 0) {
         <li class="atividades">
         <h3>Atividade:</h3>
             <p class="p"><?php echo $row['txt']; ?></p> 
-            <button id="delete" class="botoes delete" data-id="<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></button>
-            <button id="edit" class="botoes edit" data-id="<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></button>
-            <button id="left" class="botoes left" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-left"></i></button>
-            <button disabled id="right" class="botoes right" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-right"></i></button>
+            <button id="delete" class="botoes delete" data-id="<?php echo $row['id']; ?>" ><img src="../../images/deletar.svg"  class="btn-img"alt="deletar" ></button>
+            <button id="edit" class="botoes edit" data-id="<?php echo $row['id']; ?>"><img src="../../images/editar.svg" class="btn-img" alt="editar" ></i></button>
+            <button id="left" class="botoes left" data-id="<?php echo $row['id']; ?>"><img src="../../images/voltar.svg" class="btn-img"alt="voltar" ></button>
+            <button disabled id="right" class="botoes right" data-id="<?php echo $row['id']; ?>"><img src="../../images/passar.svg" class="btn-img "alt="passar" ></button>
         </li>
 
         <?php
