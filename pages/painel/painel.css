@@ -125,3 +125,40 @@ p .teste {
     padding: 10px;
     border-radius: 5px;
 }
+
+
+.botoes{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: red;
+}
+
+.edit {
+    background-color: blue;
+}
+.left {
+    background-color: orange;
+}
+.right {
+    background-color: green;
+}
+
+.atividades{
+    background-color: white;
+    margin: 10px;
+    border: grey 2px solid;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 5px 2px grey;
+    padding: 10px;
+
+}
+
+.p {
+    text-align: center;
+    padding-bottom: 5px;
+}
