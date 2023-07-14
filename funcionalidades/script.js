@@ -12,9 +12,7 @@ function sessao() {
     },
     success: function(result) {
       if (result !== "false") {
-        console.log("Tem alguma sessão aqui!!");
-        console.log("Valor da sessão: " + result);
-        alert("Sessão iniciada com sucesso!");
+        alert("Login efetuado com sucesso!");
         UsuarioId = result;
         console.log(UsuarioId);
         showData(); // Chama a função showData() aqui
@@ -35,12 +33,7 @@ function sessao() {
 
 sessao();
 
-  //----------------------------------------------------------
-
-  function showData() {
-    console.log("entrando no showdata");
-    console.log(UsuarioId);
-
+   function showData() {
     $.ajax({
       url: '../../funcionalidades/show.php',
       type: 'GET',
@@ -58,9 +51,6 @@ sessao();
   }
 
   function showFazendo() {
-    console.log("entrando no showFazendo");
-    console.log(UsuarioId);
-
     $.ajax({
       url: '../../funcionalidades/showFazendo.php',
       type: 'GET',
@@ -78,9 +68,6 @@ sessao();
   }
 
   function showFeito() {
-    console.log("entrando no showFeito");
-    console.log(UsuarioId);
-
     $.ajax({
       url: '../../funcionalidades/showFeito.php',
       type: 'GET',
@@ -98,13 +85,7 @@ sessao();
   }
 
 
-
-
-
   function totalFazer() {
-    console.log("entrando no TotalFazer");
-    console.log(UsuarioId);
-
     $.ajax ({
       url: '../../funcionalidades/totalFazer.php',
       type: 'GET',
@@ -118,9 +99,6 @@ sessao();
   }
 
   function totalFazendo() {
-    console.log("entrando no TotalFazendo");
-    console.log(UsuarioId);
-
     $.ajax ({
       url: '../../funcionalidades/totalFazendo.php',
       type: 'GET',
@@ -134,9 +112,6 @@ sessao();
   }
 
   function totalFeito() {
-    console.log("entrando no TotalFeito");
-    console.log(UsuarioId);
-
     $.ajax ({
       url: '../../funcionalidades/totalFeito.php',
       type: 'GET',
@@ -151,7 +126,6 @@ sessao();
 
 
   $(document).on("click", "#clearFazer", function(){
-    console.log("botão clear clicado!")
     $.ajax({
       url:'../../funcionalidades/clear.php',
       type: 'GET',
@@ -168,7 +142,6 @@ sessao();
 
   
   $(document).on("click", "#clearFazendo", function(){
-    console.log("botão clear clicado!")
     $.ajax({
       url:'../../funcionalidades/clearFazendo.php',
       type: 'GET',
@@ -184,7 +157,6 @@ sessao();
   });
 
   $(document).on("click", "#clearFeito", function(){
-    console.log("botão clear clicado!")
     $.ajax({
       url:'../../funcionalidades/clearFeito.php',
       type: 'GET',
@@ -202,7 +174,6 @@ sessao();
 
 
   $(document).on("click", "#clearFazer", function(){
-    console.log("botão clear clicado!")
     $.ajax({
       url:'../../funcionalidades/clear.php',
       type: 'GET',
@@ -216,9 +187,6 @@ sessao();
       }
     });
   });
-
-
-  
 
   $("#adicionar").on("click", function(e){
     e.preventDefault();
@@ -242,6 +210,8 @@ sessao();
           totalFeito(); // Chama a função totalFeito() aqui
         }else {
           console.log(result);
+          alert("Erro ao fazer a adição da tarefa");
+
         }
       }
     });
@@ -264,6 +234,8 @@ sessao();
           totalFazer(); // Chama a função totalFazer() aqui
           totalFazendo(); // Chama a função totalFazendo() aqui
           totalFeito(); // Chama a função totalFeito() aqui
+        } else {
+          alert("Erro ao fazer a deleção da tarefa");
         }
       }
     });
@@ -272,7 +244,6 @@ sessao();
 //------------------------------------------------------------------------
 $(document).on("click", "#right", function(e) {
   e.preventDefault();
-  console.log("entrei")
   id = $(this).data("id");
   element = $(this);
 
@@ -291,7 +262,7 @@ $(document).on("click", "#right", function(e) {
         totalFazendo(); // Chama a função totalFazendo() aqui
         totalFeito(); // Chama a função totalFeito() aqui
       } else {
-        alert("ERRO");
+        alert("Erro ao acessar a funcionalidade passar");
       }
     }
   });
@@ -300,7 +271,6 @@ $(document).on("click", "#right", function(e) {
 
 $(document).on("click", "#left", function(e) {
   e.preventDefault();
-  console.log("entrei")
   id = $(this).data("id");
   element = $(this);
 
@@ -319,7 +289,7 @@ $(document).on("click", "#left", function(e) {
         totalFazendo(); // Chama a função totalFazendo() aqui
         totalFeito(); // Chama a função totalFeito() aqui
       } else {
-        alert("ERRO");
+        alert("Erro ao acessar a funcionalidade voltar");
       }
     }
   });
@@ -330,8 +300,6 @@ $(document).on("click", "#left", function(e) {
   $(document).on("click", "#editText", function(e) {
     e.preventDefault();
     let txt = $("#editInput").val();
-  
-    console.log(id, txt, "teste");
   
     $.ajax({
       url:'../../funcionalidades/edit.php',
@@ -349,7 +317,7 @@ $(document).on("click", "#left", function(e) {
           totalFeito(); // Chama a função totalFeito() aqui
           closeModal();
         } else {
-          alert("ERRO");
+          alert("Erro ao fazer a edição");
         }
       }
     });
@@ -386,58 +354,22 @@ $(document).on("click", "#edit", function(){
     async: true,
     success: function(result) {
       if (result != "") {
-        alert("Deu certo carai!")
-        let text = result.split('"')[1]  // tentar trocar mais pra frente
-
+        let text = result.split('"')[1]
         $("#editInput").val(text)
         openModal();
       } else {
-        alert("ERRO")
+        alert("Erro ao abrir a janela de edição")
       }
     }
   });
 });
-
-
-
-$(document).on("click", "#editText", function(e) {
-  e.preventDefault();
-  let txt = $("#editInput").val();
-
-  console.log(id, txt, "teste");
-
-  $.ajax({
-    url:'../../funcionalidades/edit.php',
-    type: 'post',
-    data: {id, txt},
-    async: true, 
-    success: function(result) {
-      if (result == 1) {
-        
-        alert("Alteração realizada com sucesso!");
-        showData();
-        totalTask();
-        closeModal();
-      } else {
-        alert("ERRO");
-      }
-    }
-  });
-});
-
 
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
-// Cadastro -> colocar para funcionar no ajax
 $("#cadastro").on("click", function(e){
-
   e.preventDefault();
   email = $("#email").val();
   senha = $("#senha").val();
-
-
-
-  console.log(email, senha)
 
   $.ajax({
     url: '../../funcionalidades/insertuser.php',
@@ -449,24 +381,17 @@ $("#cadastro").on("click", function(e){
         window.location.href = "painel.php"
       }else {
         console.log(result);
-        alert("ERRO")
+        alert("Erro ao cadastrar o usuário")
       }
     }
   });
 });
-
-//--------------------------------------------------------------------------------------------------------------------------------
-// login -> colocar para funcionar no ajax
 
 $("#login").on("click", function(e){
 
   e.preventDefault();
   email = $("#email").val();
   senha = $("#senha").val();
-
-
-
-  console.log(email, senha)
 
   $.ajax({
     url: '../../funcionalidades/loginusuario.php',
@@ -478,14 +403,8 @@ $("#login").on("click", function(e){
         window.location.href = "painel.php"
       }else {
         console.log(result);
-        alert("ERRO")
+        alert("Erro ao fazer o login")
       }
     }
   });
 });
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------------------------------
