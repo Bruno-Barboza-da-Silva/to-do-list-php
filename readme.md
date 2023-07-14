@@ -40,6 +40,7 @@ O objetivo final do projeto é fornecer uma ferramenta simples e eficaz para que
 1. Para executar o projeto, é necessário utilizar o XAMPP e ligar o MySQL e o Apache.
 2. Para criar o banco de dados, execute os comnando do arquivo "scriptinicial.sql" (localizado na pasta "database") no phpMyAdmin para criar a base de dados e tabelas
 3. Preencha as informações da sua base de dados no arquivo "dados.exemplo.php" e em seguida o renomeie para "dados.php"
+4. O repositório "to-do-list-php" deve estar na pasta "htdocs", que está localizada dentro da pasta "xampp"
    <br>
    <br>
-Após esses 3 passos a aplicação deve funcionar, porém qualquer dúvida estou a disposição no e-mail: brunobarbozasilva@gmail.com
+Após esses 4 passos a aplicação deve funcionar, porém qualquer dúvida estou a disposição no e-mail: brunobarbozasilva@gmail.com
