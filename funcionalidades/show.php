@@ -10,52 +10,15 @@ $result = mysqli_query($mysqli, $sql);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         ?>
-        <li>
+        <li class="atividades">
             <h3>Atividade:</h3>
-            <p><?php echo $row['txt']; ?></p> 
-            <button id="delete" class="botoes" data-id="<?php echo $row['id']; ?>" ><i class="fa fa-trash"></i></button>
-            <button id="edit" class="botoes" data-id="<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></button>
-            <button disabled id="left" class="botoes" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-left"></i></button>
-            <button id="right" class="botoes" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-right"></i></button>
-
-
-        <style>
-
-            #delete {
-                background-color: red;
-            }
-            #edit {
-                background-color: blue;
-            }
-            #left {
-                background-color: orange;
-            }
-            #right {
-                background-color: green;
-            }
-            .botoes{
-                padding: 5px;
-                border-radius: 5px;
-            }
-            li{
-                background-color: white;
-                margin: 10px;
-                border: grey 2px solid;
-                border-radius: 5px;
-                width: 200px;
-                text-align: center;
-                box-shadow: 0 0 5px 2px grey;
-                padding: 10px;
-
-            }
-            p {
-                text-align: center;
-                padding-bottom: 5px;
-            }
-        </style>
-        
-
+            <p class="p"><?php echo $row['txt']; ?></p> 
+            <button id="delete" class="botoes delete" data-id="<?php echo $row['id']; ?>" ><i class="fa fa-trash"></i></button>
+            <button id="edit" class="botoes edit" data-id="<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></button>
+            <button disabled id="left" class="botoes left" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-left"></i></button>
+            <button id="right" class="botoes right" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-right"></i></button>
         </li>
+
         <?php
     }
 } else {
