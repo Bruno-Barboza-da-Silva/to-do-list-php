@@ -162,3 +162,10 @@ p .teste {
     text-align: center;
     padding-bottom: 5px;
 }
+
+
+#data, #data2, #data3 {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+}
