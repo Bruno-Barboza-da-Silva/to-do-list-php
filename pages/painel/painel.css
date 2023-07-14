@@ -98,3 +98,19 @@ li {
 }
 
 
+p .teste {
+    text-align: end;
+}
+
+.footer {
+    width: 100%;
+    text-align: end;
+}
+
+
+.footer .clear {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}

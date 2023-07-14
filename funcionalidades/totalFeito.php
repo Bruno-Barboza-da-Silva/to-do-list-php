@@ -11,4 +11,4 @@
 
 ?>
 
-Total <span><?php echo $count; ?></span>
+<p id="teste" class="teste">Total: <?php echo $count; ?></p>
