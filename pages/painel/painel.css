@@ -114,3 +114,14 @@ p .teste {
     padding: 10px;
     border-radius: 5px;
 }
+
+.adicionar-texto {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.adicionar {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+}
