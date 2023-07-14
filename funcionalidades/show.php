@@ -22,7 +22,7 @@ if (mysqli_num_rows($result) > 0) {
         <?php
     }
 } else {
-    echo "<div style='text-align:center;'>Hooray, no task here.</div>";
+    echo "<div>Sem atividades...</div>";
 }
 ?>
 
