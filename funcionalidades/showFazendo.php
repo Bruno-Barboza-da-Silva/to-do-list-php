@@ -14,6 +14,8 @@ if (mysqli_num_rows($result) > 0) {
             <p><?php echo $row['txt']; ?></p> 
             <button id="delete" data-id="<?php echo $row['id']; ?>"><i class="fa fa-trash"></i></button>
             <button id="edit" data-id="<?php echo $row['id']; ?>"><i class="fa fa-edit"></i></button>
+            <button id="left" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-left"></i></button>
+            <button id="right" data-id="<?php echo $row['id']; ?>"><i class="fa fa-chevron-right"></i></button>
         </li>
         <?php
     }
