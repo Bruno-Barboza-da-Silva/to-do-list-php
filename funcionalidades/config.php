@@ -1,8 +1,5 @@
 <?php
-$host = "localhost:3307"; // colocar o seu host
-$user = "root"; // colocar o seu usuário
-$password = "NOVASENHA"; // colocar a sua senha
-$database = "to_do_list"; // colocar a sua base de dados
+  include '../dados.php';
 
 $mysqli = new mysqli($host, $user , $password, $database);
 
