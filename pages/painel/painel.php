@@ -72,9 +72,11 @@
         <div class="modal-content">
             <!-- Conteúdo da janela modal -->
             <h1>Editar a sua atividade</h1>
-            <input type="text" id="editInput">
-            <button onclick="closeModal()" id="closeModal">Fechar</button>
-            <button type="button" id="editText">Editar</button>
+            <input type="text" id="editInput" class="modal-input">
+            <div class="btn-container">
+            <button onclick="closeModal()" id="closeModal" class="modal-btn-fechar">Fechar</button>
+            <button type="button" id="editText" class="modal-btn-editar">Editar</button>
+            </div>
         </div>
     </div>
 

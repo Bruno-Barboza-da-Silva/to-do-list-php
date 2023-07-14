@@ -23,6 +23,7 @@ function sessao() {
         totalFeito(); // Chama a função totalFeito() aqui
       } else {
         console.log("Sem sessão");
+        alert("Não foi possível localizar a sessão");
       }
     },
     error: function() {
@@ -44,7 +45,7 @@ sessao();
           $("#data").html(result);
         } else {
           console.log(result);
-          alert("ERRO");
+          alert("Erro ao carregar as tarefas a fazer");
         }
       }
     });
@@ -61,7 +62,7 @@ sessao();
           $("#data2").html(result);
         } else {
           console.log(result);
-          alert("ERRO");
+          alert("Erro ao carregar as tarefas fazendo");
         }
       }
     });
@@ -78,7 +79,7 @@ sessao();
           $("#data3").html(result);
         } else {
           console.log(result);
-          alert("ERRO");
+          alert("Erro ao carregar as tarefas feito");
         }
       }
     });
@@ -211,7 +212,6 @@ sessao();
         }else {
           console.log(result);
           alert("Erro ao fazer a adição da tarefa");
-
         }
       }
     });
