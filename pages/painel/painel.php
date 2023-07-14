@@ -30,7 +30,7 @@
     </ul>
     <div class="footer">
       <p id="total_task"></p>
-      <button id="clearFazer">Apagar tudo</button>
+      <button id="clearFazer" class="clear">Apagar tudo</button>
     </div>
   </div>
 
@@ -43,7 +43,7 @@
     </ul>
     <div class="footer">
       <p id="total_task2"></p>
-      <button id="clearFazendo">Clear</button>
+      <button id="clearFazendo" class="clear">Apagar tudo</button>
     </div>
   </div>
 
@@ -56,7 +56,7 @@
     </ul>
     <div class="footer">
       <p id="total_task3"></p>
-      <button id="clearFeito">Clear</button>
+      <button id="clearFeito" class="clear">Apagar tudo</button>
     </div>
   </div>
 
