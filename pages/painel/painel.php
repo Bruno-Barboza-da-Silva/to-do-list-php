@@ -21,8 +21,8 @@
     <h1>A fazer...</h1>
     <form class="form" action="../../funcionalidades/script.js">
       <div class="inputBox">
-        <input type="text" id="txt" placeholder="Enter your Task" required>
-        <button id="adicionar"><i class="fa fa-plus"></i></button>
+        <input type="text" class="adicionar-texto" id="txt" placeholder="Nova atividade..." required>
+        <button class="adicionar" id="adicionar"><i class="fa fa-plus"></i></button>
       </div>
     </form>
     <ul id="data">
